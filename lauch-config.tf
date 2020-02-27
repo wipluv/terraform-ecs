@@ -4,7 +4,7 @@ resource "aws_launch_configuration" "default" {
     instance_type               = "t2.micro"
     iam_instance_profile        = "${aws_iam_instance_profile.default.id}"    root_block_device {
       volume_type = "standard"
-      volume_size = 22
+      volume_size = 30
       delete_on_termination = true
     }    lifecycle {
       create_before_destroy = true
