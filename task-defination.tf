@@ -1,13 +1,14 @@
+/*
 data "aws_ecs_task_definition" "default" {
   task_definition = "${aws_ecs_task_definition.default.family}"
 }
-resource "aws_ecs_task_definition" "default" {
+*/resource "aws_ecs_task_definition" "default" {
     family                = "nginx"
     container_definitions = <<DEFINITION
 [
   {
     "name": "nginx",
-    "image": "wipluv/helloapp-nginx:v1",
+    "image": "ganez/helloapp-nginx:v1",
     "essential": true,
     "portMappings": [
       {
