@@ -16,8 +16,10 @@ resource "aws_lb" "default" {
     type             = "forward"
     target_group_arn = "${aws_lb_target_group.default.arn}"
   }
-}resource "aws_lb_target_group" "default" {
+}
+resource "aws_lb_target_group" "default" {
   name     = "terraform-ecs-nginx"
   port     = 80
   protocol = "HTTP"
   vpc_id   = "vpc-ffb59c85"
+  }
